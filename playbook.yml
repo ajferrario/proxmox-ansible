@@ -1,0 +1,6 @@
+---
+- hosts: linux-hosts
+  become: true
+  roles:
+  - free-proxmox-repo
+  - package-update

@@ -1,0 +1,14 @@
+- name: Upgrade all packages in CentOS machines
+  when: host_os_family == "CentOS"
+  yum: name=* state=latest
+
+- name: Upgrade all packages in Debian machines
+  apt:
+    upgrade: yes
+    update_cache: yes
+    cache_valid_time: 86400 #One day
+
+- name: Reboot system if required
+  command: shutdown -r now 'Rebooting to complete system upgrade'
+  args:
+    remove: /var/run/reboot-required
