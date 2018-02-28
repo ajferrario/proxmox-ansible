@@ -1,0 +1,8 @@
+node0 ansible_host=32.32.0.3
+node1 ansible_host=32.32.0.4
+node2 ansible_host=32.32.0.5
+node3 ansible_host=32.32.0.6
+
+[proxmox-hosts]
+node[0:3]
+test
