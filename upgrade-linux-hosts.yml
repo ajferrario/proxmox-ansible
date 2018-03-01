@@ -16,4 +16,4 @@
     - name: Reboot system if required
       command: shutdown -r now 'Rebooting to complete system upgrade'
       args:
-        remove: /var/run/reboot-required
+        removes: /var/run/reboot-required
