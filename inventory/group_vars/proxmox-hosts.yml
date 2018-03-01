@@ -1,3 +1,0 @@
----
-ansible_user: root
-host_os_family: Debian
