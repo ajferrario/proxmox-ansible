@@ -1,5 +1,5 @@
 - hosts: proxmox-hosts
-  sudo: yes
+  become: true
 
   tasks:
     - name: make sure paid repos are commented
