@@ -1,0 +1,28 @@
+- hosts: ansible
+  become: true
+
+  tasks:
+    - name: install pip
+      apt:
+        name: python-pip
+        state: present
+
+    - name: install python-dev
+      apt:
+        name: python-dev
+        state: present
+
+    - name: install build-essential
+      apt:
+        name: build-essential
+        state: present
+
+    - name: upgrade pip
+      pip:
+        name: pip
+        state: latest
+        
+    - name: upgrade virtualenv
+      pip:
+        name: virtualenv
+        state: latest
