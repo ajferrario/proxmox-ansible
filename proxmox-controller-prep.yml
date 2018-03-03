@@ -3,10 +3,8 @@
 
   tasks:
     - name: install proxmoxer
-      apt:
-        pkg: proxmoxer
-        state: latest
+      pip:
+        name: proxmoxer
     - name: install requests
       apt:
-        pkg: requests
-        state: latest
+        name: requests
