@@ -1,0 +1,12 @@
+- hosts: ansible
+  become: true
+
+  tasks:
+    - name: install proxmoxer
+      apt:
+        pkg: proxmoxer
+        state: latest
+    - name: install requests
+      apt:
+        pkg: requests
+        state: latest
