@@ -6,5 +6,5 @@
       pip:
         name: proxmoxer
     - name: install requests
-      apt:
+      pip:
         name: requests
