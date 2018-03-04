@@ -1,0 +1,12 @@
+- hosts: ansible
+  become: true
+
+  tasks:
+    - name: remove test vm
+      proxmox_kvm:
+        api_user: root@pam
+        api_password: "!kF78afer"
+        api_host: 32.32.0.3
+        name: spynal
+        node: node2
+        state: absent
