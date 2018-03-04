@@ -7,6 +7,9 @@
         api_user: root@pam
         api_password: "!kF78afer"
         api_host: 32.32.0.3
-        name: spynal
+        name: testitude
         node: node2
-        state: started
+        state: present
+        storage: Disks
+        format: qcow2
+        timeout: 500
