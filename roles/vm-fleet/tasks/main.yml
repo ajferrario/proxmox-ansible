@@ -11,4 +11,4 @@
     storage: Disks
     format: qcow2
     timeout: 500
-  with_items: vm-list
+  with_items: "{{vm-list}}"
