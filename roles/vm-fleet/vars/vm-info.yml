@@ -6,14 +6,14 @@ node-memory: 8192
 node-cpu: 4
 node-template: u17.04-template
 vm-list:
-  - {name: k8s-master-1, node: node0}
-  - {name: k8s-master-2, node: node1}
-  - {name: k8s-master-3, node: node2}
-  - {name: k8s-infra-1, node: node3}
-  - {name: k8s-infra-2, node: node0}
-  - {name: k8s-loadbalancer-1, node: node1}
-  - {name: k8s-app-1, node: node2}
-  - {name: k8s-app-2, node: node3}
-  - {name: k8s-app-3, node: node0}
-  - {name: k8s-app-4, node: node1}
-  - {name: k8s-app-5, node: node2}
+  - {name: "k8s-master-1", node: "node0"}
+  - {name: "k8s-master-2", node: "node1"}
+  - {name: "k8s-master-3", node: "node2"}
+  - {name: "k8s-infra-1", node: "node3"}
+  - {name: "k8s-infra-2", node: "node0"}
+  - {name: "k8s-loadbalancer-1", node: "node1"}
+  - {name: "k8s-app-1", node: "node2"}
+  - {name: "k8s-app-2", node: "node3"}
+  - {name: "k8s-app-3", node: "node0"}
+  - {name: "k8s-app-4", node: "node1"}
+  - {name: "k8s-app-5", node: "node2"}
