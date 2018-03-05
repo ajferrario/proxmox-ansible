@@ -1,0 +1,6 @@
+---
+- name: spin up vm fleet
+  hosts: ansible
+
+  roles: 
+    - vm-fleet

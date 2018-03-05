@@ -1,0 +1,14 @@
+---
+- name: clone vms for the fleet
+  proxmox_kvm:
+    api_user: {{api_user}}
+    api_password: {{api_password}}
+    api_host: {{api_host}}
+    clone: {{clone}}
+    name: {{item.name}}
+    node: {{item.node}}
+    state: present
+    storage: Disks
+    format: qcow2
+    timeout: 500
+  with_items: vm-list
