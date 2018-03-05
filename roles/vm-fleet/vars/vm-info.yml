@@ -2,9 +2,9 @@
 api_user: root@pam
 api_password: "!kF78afer"
 api_host: 32.32.0.3
-node-memory: 8192
-node-cpu: 4
-node-template: u17.04-template
+memory: 8192
+cores: 4
+clone: u17.04-template
 vm-list:
   - {name: "k8s-master-1", node: "node0"}
   - {name: "k8s-master-2", node: "node1"}
