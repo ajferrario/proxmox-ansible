@@ -10,7 +10,7 @@
     state: present
     storage: Disks
     format: qcow2
-    cores: "{{cores}}"
-    memory: "{{memory}}"
+    # cores: "{{cores}}"
+    # memory: "{{memory}}"
     timeout: 500
   with_items: "{{vm-list}}"
