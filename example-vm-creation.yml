@@ -1,5 +1,4 @@
 - hosts: ansible
-  become: true
 
   tasks:
     - name: create test vm
