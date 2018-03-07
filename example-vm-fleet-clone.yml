@@ -1,0 +1,38 @@
+- hosts: ansible
+  become: true
+  vars:
+    api_user: root@pam
+    api_password: "!kF78afer"
+    api_host: 32.32.0.3
+    # memory: 8192
+    # cores: 4
+    clone: u17.04-template
+    vm-list:
+      - {name: "k8s-master-1", node: "node0"}
+      - {name: "k8s-master-2", node: "node1"}
+      - {name: "k8s-master-3", node: "node2"}
+      - {name: "k8s-infra-1", node: "node3"}
+      - {name: "k8s-infra-2", node: "node0"}
+      - {name: "k8s-loadbalancer-1", node: "node1"}
+      - {name: "k8s-app-1", node: "node2"}
+      - {name: "k8s-app-2", node: "node3"}
+      - {name: "k8s-app-3", node: "node0"}
+      - {name: "k8s-app-4", node: "node1"}
+      - {name: "k8s-app-5", node: "node2"}
+
+  tasks:
+    - name: clone vms for the fleet
+      proxmox_kvm:
+        api_user: "{{api_user}}"
+        api_password: "{{api_password}}"
+        api_host: "{{api_host}}"
+        clone: "{{clone}}"
+        name: "{{item.name}}"
+        node: "{{item.node}}"
+        state: present
+        storage: Disks
+        format: qcow2
+        # cores: "{{cores}}"
+        # memory: "{{memory}}"
+        timeout: 500
+      with_items: "{{vm-list}}"
