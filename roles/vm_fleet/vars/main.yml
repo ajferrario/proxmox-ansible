@@ -5,15 +5,16 @@ api_host: 32.32.0.3
 # memory: 8192
 # cores: 4
 clone: u17.04-template
+node: node2
 vm_list:
-  - {name: "k8s-master-1", node: "node0"}
-  - {name: "k8s-master-2", node: "node1"}
-  - {name: "k8s-master-3", node: "node2"}
-  - {name: "k8s-infra-1", node: "node3"}
-  - {name: "k8s-infra-2", node: "node0"}
-  - {name: "k8s-loadbalancer-1", node: "node1"}
-  - {name: "k8s-app-1", node: "node2"}
-  - {name: "k8s-app-2", node: "node3"}
-  - {name: "k8s-app-3", node: "node0"}
-  - {name: "k8s-app-4", node: "node1"}
-  - {name: "k8s-app-5", node: "node2"}
+  - {name: "k8s-master-1", target: "node0"}
+  - {name: "k8s-master-2", target: "node1"}
+  - {name: "k8s-master-3", target: "node2"}
+  - {name: "k8s-infra-1", target: "node3"}
+  - {name: "k8s-infra-2", target: "node0"}
+  - {name: "k8s-loadbalancer-1", target: "node1"}
+  - {name: "k8s-app-1", target: "node2"}
+  - {name: "k8s-app-2", target: "node3"}
+  - {name: "k8s-app-3", target: "node0"}
+  - {name: "k8s-app-4", target: "node1"}
+  - {name: "k8s-app-5", target: "node2"}

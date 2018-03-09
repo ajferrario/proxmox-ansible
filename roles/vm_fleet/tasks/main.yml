@@ -6,11 +6,12 @@
     api_host: "{{api_host}}"
     clone: "{{clone}}"
     name: "{{item.name}}"
-    node: "{{item.node}}"
+    node: "{{node}}"
+    target: "{{item.target}}"
     state: present
     storage: Disks
     format: qcow2
-    # cores: "{{cores}}"
-    # memory: "{{memory}}"
+    cores: "{{cores}}"
+    memory: "{{memory}}"
     timeout: 500
   with_items: "{{vm_list}}"
