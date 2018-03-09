@@ -5,7 +5,7 @@ api_host: 32.32.0.3
 # memory: 8192
 # cores: 4
 clone: u17.04-template
-vm-list:
+vm_list:
   - {name: "k8s-master-1", node: "node0"}
   - {name: "k8s-master-2", node: "node1"}
   - {name: "k8s-master-3", node: "node2"}
