@@ -2,8 +2,8 @@
 api_user: root@pam
 api_password: "!kF78afer"
 api_host: 32.32.0.3
-# memory: 8192
-# cores: 4
+memory: 8192
+cores: 4
 clone: u17.04-template
 node: node2
 vm_list:
