@@ -1,0 +1,40 @@
+---
+- name: create/update vms
+  vars:
+    import: "{{'/vars/' + config}}"
+  proxmox_kvm:
+  # General
+    state: "{{state}}"
+    api_host: "{{api_host}}"
+    api_user: "{{api_user}}"
+    api_password: "{{api_password}}"
+  # VM specific - mandatory
+    name: "{{item.name}}"
+    node: "{{ (item.clone != 'null') | ternary(item.template_location, item.vm_location) }}"
+  # VM specific - optional
+    clone: "{{item.clone | default('null')}}"
+    cores: "{{item.cores | default(1)}}"
+    cpu: "{{item.cpu | default('kvm64')}}"
+    memory: "{{item.memory | default(512)}}"
+    net: "{{item.net | default('null')}}"
+    ostype: "{{item.ostype | default('l26')}}"
+    pool: "{{item.pool | default('null')}}"
+    scsi: "{{item.scsi | default('null')}}"
+    storage: "{{item.storage | default('null')}}"
+    target: "{{ ((item.clone != 'null') | ternary(item.vm_location, 'null')) }}"
+    template: "{{item.template | default('null')}}"
+  with_items: "{{vm_info}}"
+  when: state == present
+
+- name: delete/start/restart vms
+  proxmox_kvm:
+  # General
+    state: "{{state}}"
+    api_host: "{{api_host}}"
+    api_user: "{{api_user}}"
+    api_password: "{{api_password}}"
+  # VM specific
+    name: "{{item.name}}"
+    node: "{{item.vm_location}}"
+  with_items: "{{vm_list}}"
+  when: state != present

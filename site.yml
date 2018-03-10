@@ -2,6 +2,9 @@
 - name: spin up vm fleet
   hosts: ansible
   become: true
-
-  roles: 
-    - vm_fleet
+  
+  tasks:
+  - include_role:
+      name: proxmox_kvm_fleet
+    vars:
+      config: 3master2infra1lb6app.yml

@@ -1,0 +1,23 @@
+---
+state: present # normally we want to create the vm fleet we're defining
+api_host: 127.0.0.1 # try to run on loopback
+api_password: change_me # this should always break. If this is used you're doing it wrong
+api_user: root@pam # default login for proxmox host
+config:
+vm_info:
+  - 
+  # Regular defaults
+    cores: 1 # 1 cpu by default
+    cpu: kvm64 # standard amd64 cpu type
+    memory: 512 # half gig of ram by default
+    name: test
+    net: null
+    ostype: l26 # modern linux kernel
+    pool: null
+    scsi: null
+    vm_location: null # which physical node to host the vm on
+    template: no # do we want this vm to be a template, no not usually
+  # Clone specific defaults
+    clone: no # by default create a new VM
+    template_location: null # the node where the template lives for a clone
+    storage: null # used only for clone
