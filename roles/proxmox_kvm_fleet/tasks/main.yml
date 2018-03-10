@@ -22,7 +22,7 @@
     target: "{{ ((item.clone != 'null') | ternary(item.vm_location, 'null')) }}"
     template: "{{item.template | default('null')}}"
   with_items: "{{vm_info}}"
-  when: state == present
+  when: state == 'present'
 
 - name: delete/start/restart vms
   proxmox_kvm:
@@ -35,4 +35,4 @@
     name: "{{item.name}}"
     node: "{{item.vm_location}}"
   with_items: "{{vm_list}}"
-  when: state != present
+  when: state != 'present'
