@@ -10,7 +10,7 @@
     name: "{{item.name}}"
     node: "{{ (item.clone != None) | ternary(item.template_location, item.vm_location) }}"
   # VM specific - optional
-    clone: "{{item.clone | default(None)}}"
+    clone: "{{item.clone | default('no')}}"
     cores: "{{item.cores | default(1)}}"
     cpu: "{{item.cpu | default('kvm64')}}"
     memory: "{{item.memory | default(512)}}"
@@ -20,7 +20,7 @@
     scsi: "{{item.scsi | default(None)}}"
     storage: "{{item.storage | default(None)}}"
     target: "{{ ((item.clone != None) | ternary(item.vm_location, None)) }}"
-    template: "{{item.template | default(None)}}"
+    template: "{{item.template | default('no')}}"
   with_items: "{{vm_info}}"
   when: state == 'present'
 
