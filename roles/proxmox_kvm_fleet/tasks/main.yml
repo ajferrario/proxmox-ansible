@@ -35,5 +35,5 @@
   # VM specific
     name: "{{item.name}}"
     node: "{{item.vm_location}}"
-  with_items: "{{vm_list}}"
+  with_items: "{{vm_info}}"
   when: state != 'present'
