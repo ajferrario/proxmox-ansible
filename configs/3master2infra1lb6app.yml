@@ -80,3 +80,10 @@ vm_info:
     cores: 4
     clone: u17.04-template
     template_location: node2
+  -
+    name: k8s-app-6
+    vm_location: node3
+    memory: 8192
+    cores: 4
+    clone: u17.04-template
+    template_location: node2
