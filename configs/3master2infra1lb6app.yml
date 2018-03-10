@@ -5,78 +5,78 @@ api_host: 32.32.0.3
 vm_info:
   -
     name: k8s-master-1
-    target: node0
+    vm_location: node0
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   - 
     name: k8s-master-2
-    target: node1
+    vm_location: node1
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-master-3
-    target: node2
+    vm_location: node2
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-infra-1
-    target: node3
+    vm_location: node3
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-infra-2
-    target: node0
+    vm_location: node0
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-loadbalancer-1
-    target: node1
+    vm_location: node1
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-app-1
-    target: node2
+    vm_location: node2
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-app-2
-    target: node3
+    vm_location: node3
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-app-3
-    target: node0
+    vm_location: node0
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-app-4
-    target: node1
+    vm_location: node1
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
   -
     name: k8s-app-5
-    target: node2
+    vm_location: node2
     memory: 8192
     cores: 4
     clone: u17.04-template
-    node: node2
+    template_location: node2
