@@ -6,6 +6,7 @@
     api_host: "{{api_host}}"
     api_user: "{{api_user}}"
     api_password: "{{api_password}}"
+    timeout: 500
   # VM specific - mandatory
     name: "{{item.name}}"
     node: "{{ (item.clone != None) | ternary(item.template_location, item.vm_location) }}"
