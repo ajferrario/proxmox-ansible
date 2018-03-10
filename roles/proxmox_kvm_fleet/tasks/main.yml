@@ -1,7 +1,7 @@
 ---
 - name: create/update vms
-  vars:
-    import: "{{'/vars/' + config}}"
+  vars_files:
+    - "{{'/vars/' + config}}"
   proxmox_kvm:
   # General
     state: "{{state}}"
