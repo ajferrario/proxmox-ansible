@@ -8,19 +8,19 @@
     api_password: "{{api_password}}"
   # VM specific - mandatory
     name: "{{item.name}}"
-    node: "{{ (item.clone != 'null') | ternary(item.template_location, item.vm_location) }}"
+    node: "{{ (item.clone != None) | ternary(item.template_location, item.vm_location) }}"
   # VM specific - optional
-    clone: "{{item.clone | default('null')}}"
+    clone: "{{item.clone | default(None)}}"
     cores: "{{item.cores | default(1)}}"
     cpu: "{{item.cpu | default('kvm64')}}"
     memory: "{{item.memory | default(512)}}"
-    net: "{{item.net | default('null')}}"
+    net: "{{item.net | default(None)}}"
     ostype: "{{item.ostype | default('l26')}}"
-    pool: "{{item.pool | default('null')}}"
-    scsi: "{{item.scsi | default('null')}}"
-    storage: "{{item.storage | default('null')}}"
-    target: "{{ ((item.clone != 'null') | ternary(item.vm_location, 'null')) }}"
-    template: "{{item.template | default('null')}}"
+    pool: "{{item.pool | default(None)}}"
+    scsi: "{{item.scsi | default(None)}}"
+    storage: "{{item.storage | default(None)}}"
+    target: "{{ ((item.clone != None) | ternary(item.vm_location, None)) }}"
+    template: "{{item.template | default(None)}}"
   with_items: "{{vm_info}}"
   when: state == 'present'
 
