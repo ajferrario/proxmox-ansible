@@ -8,82 +8,82 @@ vm_info:
     vm_location: node0
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   - 
     name: k8s-master-2
     vm_location: node1
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-master-3
     vm_location: node2
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-infra-1
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-infra-2
     vm_location: node0
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-loadbalancer-1
     vm_location: node1
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-1
     vm_location: node2
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-2
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-3
     vm_location: node0
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-4
     vm_location: node1
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-5
     vm_location: node2
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
   -
     name: k8s-app-6
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: u17.04-template
-    template_location: node2
+    clone: CentOS7-template
+    template_location: node3
