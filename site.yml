@@ -3,7 +3,7 @@
   hosts: ansible
   become: true
   vars_files:
-  - configs/3master2infra1lb6app.yml
+  - configs/3master2infra1lb6appCentOS.yml
   
   tasks:
   - include_role:
