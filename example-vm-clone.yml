@@ -15,5 +15,5 @@
         state: present
         storage: datastore
         format: qcow2
-        net: ({{ '{"net0":"virtio="' + MAC + '",bridge=vmbr1,rate=200"}' }})
+        net: '{"net0":"virtio,bridge=vmbr1,rate=200"}'
         timeout: 500
