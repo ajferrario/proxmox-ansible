@@ -1,5 +1,7 @@
 - hosts: ansible
   become: true
+  vars:
+    MAC: 11.11.11.22.22.22
 
   tasks:
     - name: create test vm
@@ -7,10 +9,11 @@
         api_user: root@pam
         api_password: "!kF78afer"
         api_host: 32.32.0.3
-        clone: u17.04-template
+        clone: CentOS7-template
         name: testitude
         node: node2
         state: present
         storage: Disks
         format: qcow2
+        net: ({{ '{"net0":"virtio=' + MAC + ',bridge=vmbr1,rate=200"}' }})
         timeout: 500

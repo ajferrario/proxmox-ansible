@@ -23,17 +23,19 @@
     target: "{{ ((item.clone != None) | ternary(item.vm_location, omit)) }}"
     template: "{{item.template | default('no')}}"
   with_items: "{{vm_info}}"
-  when: state == 'present'
+  # when: state == 'present' or state == 'started'
 
-- name: delete/start/restart vms
-  proxmox_kvm:
-  # General
-    state: "{{state}}"
-    api_host: "{{api_host}}"
-    api_user: "{{api_user}}"
-    api_password: "{{api_password}}"
-  # VM specific
-    name: "{{item.name}}"
-    node: "{{item.vm_location}}"
-  with_items: "{{vm_info}}"
-  when: state != 'present'
+# - name: delete/start/restart vms
+#   proxmox_kvm:
+#   # General
+#     state: "{{state}}"
+#     api_host: "{{api_host}}"
+#     api_user: "{{api_user}}"
+#     api_password: "{{api_password}}"
+#   # VM specific
+#     name: "{{item.name}}"
+#     node: "{{item.vm_location}}"
+#   with_items: "{{vm_info}}"
+#   when: state != 'present'
+
+#   -

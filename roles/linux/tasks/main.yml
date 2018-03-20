@@ -1,0 +1,13 @@
+---
+# packages
+- name: make sure all base packages are installed
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
+
+- name: upgrade all packages to latest version
+  package: name=* state=latest
+# networking
+- name: update hostname
+  hostname: "{{ hostname }}" 
