@@ -11,9 +11,9 @@
         api_host: 32.32.0.3
         clone: CentOS7-template
         name: testitude
-        node: node2
+        node: node3
         state: present
-        storage: Disks
+        storage: datastore
         format: qcow2
-        net: ({{ '{"net0":"virtio=' + MAC + ',bridge=vmbr1,rate=200"}' }})
+        net: ({{ '{"net0":"virtio="' + MAC + '",bridge=vmbr1,rate=200"}' }})
         timeout: 500
