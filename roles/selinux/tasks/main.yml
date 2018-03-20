@@ -1,0 +1,12 @@
+---
+# tasks file for openshift cluster
+- name: make sure SELinux packages are installed
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
+
+- name: update /etc/selinux/config
+  copy:
+    src: SELinux_config
+    dest: /etc/selinux/config

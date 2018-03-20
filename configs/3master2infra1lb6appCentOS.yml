@@ -6,21 +6,21 @@ vm_info:
   -
     name: k8s-master-1
     vm_location: node0
-    memory: 8192
+    memory: 16384
     cores: 4
     clone: CentOS7-template
     template_location: node3
   - 
     name: k8s-master-2
     vm_location: node1
-    memory: 8192
+    memory: 16384
     cores: 4
     clone: CentOS7-template
     template_location: node3
   -
     name: k8s-master-3
     vm_location: node2
-    memory: 8192
+    memory: 16384
     cores: 4
     clone: CentOS7-template
     template_location: node3

@@ -1,0 +1,12 @@
+---
+# vars file for storage-server
+packages:
+  - policycoreutils
+  - policycoreutils-python
+  - selinux-policy
+  - selinux-policy-targeted
+  - libselinux-utils
+  - setroubleshoot-server
+  - setools
+  - setools-console
+  - mcstrans
