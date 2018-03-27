@@ -15,5 +15,5 @@
         state: present
         storage: datastore
         format: qcow2
-        net: '{"net0":"virtio=AA:BB:CC:DD:EE:11,bridge=vmbr0,rate=200"}'
+        net: '{"net1":"virtio=AA:BB:CC:DD:EE:11,bridge=vmbr0,rate=200"}'
         timeout: 500
