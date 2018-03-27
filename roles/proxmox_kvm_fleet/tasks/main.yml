@@ -22,6 +22,7 @@
     storage: "{{item.storage | default(omit)}}"
     target: "{{ ((item.clone != None) | ternary(item.vm_location, omit)) }}"
     template: "{{item.template | default('no')}}"
+    description: "{{ item.meta | default(omit)}}"
   with_items: "{{vm_info}}"
   # when: state == 'present' or state == 'started'
 

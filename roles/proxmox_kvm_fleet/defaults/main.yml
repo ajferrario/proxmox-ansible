@@ -21,3 +21,4 @@ vm_info:
     clone: no # by default create a new VM
     template_location: null # the node where the template lives for a clone
     storage: null # used only for clone
+    meta: ""
