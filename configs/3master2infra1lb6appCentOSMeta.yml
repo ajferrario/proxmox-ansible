@@ -8,7 +8,7 @@ vm_info:
     vm_location: node0
     memory: 16384
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["masters","openshift-nodes"] }'
   - 
@@ -16,7 +16,7 @@ vm_info:
     vm_location: node1
     memory: 16384
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["masters","openshift-nodes"] }'
   -
@@ -24,7 +24,7 @@ vm_info:
     vm_location: node2
     memory: 16384
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["masters","openshift-nodes"] }'
   -
@@ -32,7 +32,7 @@ vm_info:
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["infras","openshift-nodes"] }'
   -
@@ -40,7 +40,7 @@ vm_info:
     vm_location: node0
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["infras","openshift-nodes"] }'
   -
@@ -48,7 +48,7 @@ vm_info:
     vm_location: node1
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["load-balancers","openshift-nodes"] }'
   -
@@ -56,7 +56,7 @@ vm_info:
     vm_location: node2
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
   -
@@ -64,7 +64,7 @@ vm_info:
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
   -
@@ -72,7 +72,7 @@ vm_info:
     vm_location: node0
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
   -
@@ -80,7 +80,7 @@ vm_info:
     vm_location: node1
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
   -
@@ -88,7 +88,7 @@ vm_info:
     vm_location: node2
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
   -
@@ -96,6 +96,6 @@ vm_info:
     vm_location: node3
     memory: 8192
     cores: 4
-    clone: CentOS7-template
+    clone: centos7-template
     template_location: node3
     meta: '{ "groups": ["app-hosts","openshift-nodes"] }'
