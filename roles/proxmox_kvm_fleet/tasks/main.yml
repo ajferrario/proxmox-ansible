@@ -34,7 +34,7 @@
     api_password: "{{api_password}}"
   # VM specific - mandatory
     name: "{{item.name}}"
-    node: "{{ (item.clone != None) | ternary(item.template_location, item.vm_location) }}"
+    node: "{{item.vm_location}}"
     description: "{{ item.meta | default(omit)}}"
     update: yes
   with_items: "{{vm_info}}"
