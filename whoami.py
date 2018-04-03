@@ -46,7 +46,7 @@ else:
         # set the hostname of the system to the vm_name given in proxmox
         print('Found a MAC match')
         hostname = vm_name
-        call('hostnamectl', 'set-hostname', hostname, '--static')
+        call(['hostnamectl', 'set-hostname', hostname, '--static'])
         print('Set the system hostname to: ' + hostname)
         break
     if hostname:
