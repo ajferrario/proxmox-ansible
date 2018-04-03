@@ -1,0 +1,10 @@
+---
+  - name: spin up vm fleet
+    hosts: openshift-nodes
+    become: true
+    vars_files:
+    - configs/3master2infra1lb6appCentOSMeta.yml
+    
+    tasks:
+    - include_role:
+        name: proxmox_kvm_fleet
