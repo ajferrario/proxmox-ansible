@@ -52,3 +52,6 @@
     node: "{{item.vm_location}}"
   with_items: "{{vm_info}}"
   when: state != 'present'
+
+- name: reload dynamic inventory to account for new hosts
+  meta: refresh-inventory

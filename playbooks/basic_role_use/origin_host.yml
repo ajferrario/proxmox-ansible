@@ -3,6 +3,5 @@
     hosts: openshift-nodes
     become: true
     
-    tasks:
-    - include_role:
-        name: origin_host
+    roles:
+    - origin_host
