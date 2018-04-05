@@ -98,4 +98,4 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: "{ 'groups': ['app-hosts','openshift-nodes'] }"
