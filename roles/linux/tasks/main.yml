@@ -13,7 +13,7 @@
   file:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
     state: touch
-  when: authorized_keys_file.stat.exists = False
+  when: authorized_keys_file.stat.exists == False
 # key
 - name: put pubkey in file
   lineinfile:
