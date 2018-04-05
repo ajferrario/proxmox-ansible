@@ -1,6 +1,6 @@
 ---
   - name: prep nodes for openshift fleet
-    hosts: openshift-nodes
+    hosts: OSEv3
     become: true
     
     roles:
