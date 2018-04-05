@@ -26,6 +26,7 @@
 # { "groups": ["utility", "databases"], "a": false, "b": true }
 
 import urllib
+import ast
 
 try:
     import json
@@ -235,14 +236,14 @@ def main_list(options, config_path):
                 description = None
 
             try:
-                metadata = json.loads(description)
+                metadata = ast.literal_eval(description)
             except TypeError:
                 metadata = {}
             except ValueError:
                 metadata = {
                     'notes': description
                 }
-
+            print(metadata)
             if 'groups' in metadata:
                 # print metadata
                 for group in metadata['groups']:
