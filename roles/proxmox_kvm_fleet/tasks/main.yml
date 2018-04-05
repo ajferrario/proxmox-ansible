@@ -54,4 +54,4 @@
   when: state != 'present'
 
 - name: reload dynamic inventory to account for new hosts
-  meta: refresh-inventory
+  meta: refresh_inventory
