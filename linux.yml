@@ -1,0 +1,8 @@
+---
+- name: prep linux machines
+  hosts: linux
+  become: true
+  
+  tasks:
+  - include_role:
+      name: linux
