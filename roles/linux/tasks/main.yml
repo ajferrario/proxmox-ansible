@@ -20,6 +20,3 @@
 
 - name: upgrade all packages to latest version
   package: name=* state=latest
-# networking
-- name: update hostname
-  hostname: "{{ hostname }}" 
