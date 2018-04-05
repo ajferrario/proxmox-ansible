@@ -1,4 +1,16 @@
 ---
+- name: make direcotry
+  file:
+    path: "{{home_path + '/.ssh'}}"
+    state: directory
+- name: create empty file
+  file:
+    path: "/home/<username>/.ssh/authorized_keys"
+    state: touch
+- name: put pubkey
+  lineinfile:
+    path: "/home/<username>/.ssh/authorized_keys"
+    line: "{{ pubkey }}"
 # packages
 - name: make sure all base packages are installed
   package:
