@@ -3,4 +3,3 @@ packages:
   - NetworkManager
 pubkey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDico3/0sf4HkA6AEPhR5MaISl4kTv6BK3evDiPPCdfnU3btYI1KmrSibp8UaGiFgHexoeyMJwvUzzrTqlF5pKJlIZMkJ25Ihucy/TDzRGPg/QIlISBIUd1eX8HPpC8SZ+89B5u7KTEdLjL3JGinLvz4hukMhwD+J/BJQqxoXSmvyQLAnxY55Msdep9LxeC9jiU+TTQHfI9J68uiVar3QX4O5F/G+jBnme9kF90hU3PJrRqG5jJW0OahEZ8IAsQZO2kKeNR5aKwQh69xk+zaIEms0fOndIP+rcO/+H/1q9b5ceaHIul746Q7/aKHmlahvTBtCgZbeXgg3vh0WWNmuvV controller@controller
 home_path: /root/
-ansible_user: root
