@@ -1,0 +1,16 @@
+---
+# tasks file for origin_host
+- name: make sure origin host base packages are installed
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
+
+- name: Upgrade all packages in CentOS machines
+  when: host_os_family == "CentOS"
+  yum: name=* state=latest
+
+- name: replace docker config file with the one we want
+  copy:
+    src: docker_config
+    dest: /etc/sysconfig/docker
