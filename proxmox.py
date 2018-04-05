@@ -243,7 +243,7 @@ def main_list(options, config_path):
                 metadata = {
                     'notes': description
                 }
-            print(metadata)
+            
             if 'groups' in metadata:
                 # print metadata
                 for group in metadata['groups']:
