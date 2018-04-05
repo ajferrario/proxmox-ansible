@@ -10,7 +10,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["masters","openshift-nodes"] }
+    meta: { "groups": ["masters","openshift-nodes", "linux"] }
   - 
     name: k8s-master-2
     vm_location: node1
@@ -18,7 +18,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["masters","openshift-nodes"] }
+    meta: { "groups": ["masters","openshift-nodes", "linux"] }
   -
     name: k8s-master-3
     vm_location: node2
@@ -26,7 +26,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["masters","openshift-nodes"] }
+    meta: { "groups": ["masters","openshift-nodes", "linux"] }
   -
     name: k8s-infra-1
     vm_location: node3
@@ -34,7 +34,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["infras","openshift-nodes"] }
+    meta: { "groups": ["infras","openshift-nodes", "linux"] }
   -
     name: k8s-infra-2
     vm_location: node0
@@ -42,7 +42,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["infras","openshift-nodes"] }
+    meta: { "groups": ["infras","openshift-nodes", "linux"] }
   -
     name: k8s-loadbalancer-1
     vm_location: node1
@@ -50,7 +50,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["load-balancers","openshift-nodes"] }
+    meta: { "groups": ["load-balancers","openshift-nodes", "linux"] }
   -
     name: k8s-app-1
     vm_location: node2
@@ -58,7 +58,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
   -
     name: k8s-app-2
     vm_location: node3
@@ -66,7 +66,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
   -
     name: k8s-app-3
     vm_location: node0
@@ -74,7 +74,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
   -
     name: k8s-app-4
     vm_location: node1
@@ -82,7 +82,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
   -
     name: k8s-app-5
     vm_location: node2
@@ -90,7 +90,7 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: { "groups": ["app-hosts","openshift-nodes"] }
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
   -
     name: k8s-app-6
     vm_location: node3
@@ -98,4 +98,4 @@ vm_info:
     cores: 4
     clone: centos7-template
     template_location: node3
-    meta: "{ 'groups': ['app-hosts','openshift-nodes'] }"
+    meta: { "groups": ["app-hosts","openshift-nodes", "linux"] }
