@@ -1,13 +1,21 @@
 ---
-- name: make direcotry
+  # directory
+- name: make sure .ssh directory exists
   file:
     path: "{{home_path + '/.ssh'}}"
     state: directory
-- name: create empty file
+# file
+- name: "{{'check if authorized_keys file exists at' + home_path + '/.ssh/'}}"
+  stat:
+    path: "{{home_path + '/.ssh/authorized_keys'}}"
+  register: authorized_keys_file
+- name: create empty file if needed
   file:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
     state: touch
-- name: put pubkey
+  when: authorized_keys_file.stat.exists = False
+# key
+- name: put pubkey in file
   lineinfile:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
     line: "{{ pubkey }}"
@@ -17,6 +25,5 @@
     name: "{{ item }}"
     state: latest
   with_items: "{{ packages }}"
-
 - name: upgrade all packages to latest version
   package: name=* state=latest
