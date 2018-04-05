@@ -1,5 +1,5 @@
 ---
-- name: spin up vm fleet
+- name: create production environment
   hosts: ansible
   become: true
   vars_files:
@@ -7,3 +7,5 @@
   
   roles:
   - proxmox_kvm_fleet
+  - core_linux
+  - origin_host

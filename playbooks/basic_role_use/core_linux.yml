@@ -3,6 +3,5 @@
   hosts: linux
   become: true
   
-  tasks:
-  - include_role:
-      name: linux
+  roles:
+    - core_linux
