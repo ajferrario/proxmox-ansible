@@ -1,11 +1,20 @@
 ---
-- name: create production environment
+- name: create vm fleet for production environment
   hosts: ansible
   become: true
   vars_files:
   - configs/3master2infra1lb6appCentOSMeta.yml
-  
   roles:
   - proxmox_kvm_fleet
+
+- name: initial prep on vms
+  hosts: OSEv3
+  vars:
+    ansible_password: '!kF78afer'
+  roles:  
   - core_linux
+
+- name: origin prep on vms
+  hosts: OSEv3
+  roles:
   - origin_host
