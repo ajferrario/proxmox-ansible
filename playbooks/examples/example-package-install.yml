@@ -1,0 +1,7 @@
+- hosts: TEST
+  become: true
+
+  tasks:
+    - name: install package
+      package:
+        name: development
