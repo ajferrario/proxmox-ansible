@@ -43,3 +43,4 @@
 - name: instal python packages
   pip:
     name: pyyaml
+    executable: /usr/local/bin/pip
