@@ -1,0 +1,9 @@
+---
+- name: spin up vm fleet
+  hosts: ansible
+  become: true
+  vars_files:
+  - ../../configs/admonexample.yml
+  
+  roles:
+  - proxmox_kvm_fleet
