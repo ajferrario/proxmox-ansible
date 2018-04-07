@@ -35,6 +35,8 @@
   # VM specific - mandatory
     name: "{{item.name}}"
     node: "{{item.vm_location}}"
+    cores: "{{item.cores | default(1)}}"
+    memory: "{{item.memory | default(512)}}"
     description: "{{ item.meta | default(omit)}}"
     update: yes
   with_items: "{{vm_info}}"
