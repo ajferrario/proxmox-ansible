@@ -12,7 +12,6 @@ packages:
   - sos
   - psacct
   - docker
-  - atomic
   - NetworkManager
 
 python_tmp: /tmp
