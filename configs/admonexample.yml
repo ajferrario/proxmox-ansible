@@ -18,7 +18,7 @@
       cores: 4
       clone: centos7-template
       template_location: node3
-      meta: { "groups": [OSEv3", "etcd", "nodes", "lb", "workers", "linux"] }
+      meta: { "groups": ["OSEv3", "etcd", "nodes", "lb", "workers", "linux"] }
     -
       name: n1-nodes-2
       vm_location: node2
@@ -26,7 +26,7 @@
       cores: 4
       clone: centos7-template
       template_location: node3
-      meta: { "groups": [OSEv3", "etcd", "nodes", "workers", "linux"] }
+      meta: { "groups": ["OSEv3", "etcd", "nodes", "workers", "linux"] }
     -
       name: n1-nodes-3
       vm_location: node3
@@ -34,5 +34,5 @@
       cores: 4
       clone: centos7-template
       template_location: node3
-      meta: { "groups": [OSEv3", "etcd", "nodes", "workers", "linux"] }
+      meta: { "groups": ["OSEv3", "etcd", "nodes", "workers", "linux"] }
     
