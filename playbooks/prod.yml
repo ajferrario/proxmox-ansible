@@ -3,7 +3,7 @@
   hosts: ansible
   become: true
   vars_files:
-  - configs/3master2infra1lb6appCentOSMeta.yml
+  - ../configs/admonexample.yml
   roles:
   - proxmox_kvm_fleet
 
@@ -15,6 +15,7 @@
   - core_linux
 
 - name: origin prep on vms
-  hosts: OSEv3
-  roles:
-  - origin_host
+  import_playbook: ../../openshift-ansible/playbooks/prerequisites.yml
+
+- name: install origin on vms
+  import_playbook: ../../openshift-ansible/playbooks/deploy_cluster.yml
