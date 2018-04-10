@@ -1,5 +1,5 @@
 --- 
-- name: "{{run + role + role}}"
+- name: "run role"
   hosts: "{{ hosts }}"
   become: true
   vars_files:
