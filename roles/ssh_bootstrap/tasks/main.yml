@@ -8,22 +8,21 @@
 - name: "{{'check if authorized_keys file exists at' + home_path + '/.ssh/'}}"
   stat:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
-  register: authorized_keys_file
+  register: authorized_keys_stat
+
 - name: create empty file if needed
   file:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
     state: touch
-  when: authorized_keys_file.stat.exists == False
+  when: authorized_keys_stat.stat.exists == False
 # key
-- name: put pubkey in file
+- name: read authorized_keys_file
+  cat: "{{home_path + '/.ssh/authorized_keys'}}"
+  register: authorized_keys_cat
+
+- name: put pubkey in file if it isn't already
   lineinfile:
     path: "{{home_path + '/.ssh/authorized_keys'}}"
     line: "{{ pubkey }}"
-# packages
-- name: make sure all base packages are installed
-  package:
-    name: "{{ item }}"
-    state: latest
-  with_items: "{{ packages }}"
-- name: upgrade all packages to latest version
-  package: name=* state=latest
+  when: authorized_keys_cat.stdout.find({{ pubkey }}) == -1
+

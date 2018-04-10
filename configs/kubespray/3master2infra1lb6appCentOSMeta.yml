@@ -4,86 +4,98 @@ api_password: "!kF78afer"
 api_host: 32.32.0.3
 vm_info:
   -
-    name: k8s-master-1
+    name: kubespray-1
     vm_location: node0
     memory: 16384
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-master","etcd", "kube-node", "linux", "kubespray-12node-k8s"] }
   - 
-    name: k8s-master-2
+    name: kubespray-2
     vm_location: node1
     memory: 16384
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-master","etcd", "kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-master-3
+    name: kubespray-3
     vm_location: node2
     memory: 16384
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-master","etcd", "kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-infra-1
+    name: kubespray-4
     vm_location: node3
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-infra-2
+    name: kubespray-5
     vm_location: node0
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-loadbalancer-1
+    name: kubespray-6
     vm_location: node1
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-1
+    name: kubespray-7
     vm_location: node2
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-2
+    name: kubespray-8
     vm_location: node3
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-3
+    name: kubespray-9
     vm_location: node0
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-4
+    name: kubespray-10
     vm_location: node1
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-5
+    name: kubespray-11
     vm_location: node2
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }
   -
-    name: k8s-app-6
+    name: kubespray-12
     vm_location: node3
     memory: 8192
     cores: 4
     clone: centos7-template
     template_location: node3
+    meta: { "groups": ["kube-node", "linux", "kubespray-12node-k8s"] }

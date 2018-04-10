@@ -26,6 +26,10 @@
   with_items: "{{vm_info}}"
   when: state == 'present'
 
+- name: wait 15 seconds to let vm creation finish
+  wait_for:
+    timeout: 15
+
 - name: update vms
   proxmox_kvm:
   # General
