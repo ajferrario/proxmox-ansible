@@ -1,0 +1,9 @@
+--- 
+  - name: "{{run + role + role}}"
+    hosts: "{{ hosts }}"
+    become: true
+    vars_files:
+      - "{{ vars_file_path }}"
+    
+    roles:
+    - "{{ role }}"
