@@ -5,6 +5,7 @@
     api_host: "{{api_host}}"
     api_user: "{{api_user}}"
     api_password: "{{api_password}}"
+    name: "{{item.name}}"
   register: vm_status
   with_items: "{{vm_info}}"
 
