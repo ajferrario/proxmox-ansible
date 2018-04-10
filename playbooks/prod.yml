@@ -4,8 +4,16 @@
   become: true
   vars_files:
   - ../configs/admonexample.yml
-  roles:
-  - proxmox_kvm_fleet
+
+- name: create vm fleet
+  include_role:
+    name: proxmox_kvm_fleet
+  
+- name: create vm fleet
+  include_role:
+    name: proxmox_kvm_fleet
+  vars:
+    state: started
 
 - name: initial prep on vms
   hosts: OSEv3
