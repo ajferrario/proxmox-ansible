@@ -8,7 +8,8 @@
   register: vm_status
   with_items: "{{vm_info}}"
 
-- debug: var = vm_status
+- debug: 
+    var: vm_status
 
 - name: create/update vms
   proxmox_kvm:
