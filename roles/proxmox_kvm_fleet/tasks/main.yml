@@ -1,4 +1,15 @@
 ---
+- name: check status of VMs
+  proxmox_kvm:
+    state: current
+    api_host: "{{api_host}}"
+    api_user: "{{api_user}}"
+    api_password: "{{api_password}}"
+  register: vm_status
+  with_items: "{{vm_info}}"
+
+- debug: var = vm_status
+
 - name: create/update vms
   proxmox_kvm:
   # General
@@ -23,14 +34,16 @@
     target: "{{ ((item.clone != None) | ternary(item.vm_location, omit)) }}"
     template: "{{item.template | default('no')}}"
     description: "{{ item.meta | default(omit)}}"
+  register: "vm_list"
   with_items: "{{vm_info}}"
   when: state == 'present'
 
 - name: wait 15 seconds to let vm creation finish
   wait_for:
     timeout: 15
+  when: 
 
-- name: update vms
+- name: "{{state + existing VMs}}"
   proxmox_kvm:
   # General
     api_host: "{{api_host}}"
