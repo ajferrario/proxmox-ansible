@@ -9,7 +9,8 @@
   register: vm_status
   with_items: "{{vm_info}}"
 
-- debug: 
+- name: DEBUG
+  debug: 
     var: vm_status
 
 - name: create/update vms
