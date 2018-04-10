@@ -1,9 +1,11 @@
 --- 
-  - name: "{{run + role + role}}"
-    hosts: "{{ hosts }}"
-    become: true
-    vars_files:
-      - "{{ vars_file_path }}"
+- name: "{{collect vars at + vars_file_path }}"
+  include_vars:
+    file: "{{ vars_file_path }}"
     
-    roles:
-    - "{{ role }}"
+- name: "{{run + role + role}}"
+  hosts: "{{ hosts }}"
+  become: true
+  
+  roles:
+  - "{{ role }}"
